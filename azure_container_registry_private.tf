@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg_container_registry" {
-  name     = "rg-ben-acr-dev01-westus"
+  name     = "Azure RG name"
   location = var.location
 }
 
@@ -20,7 +20,7 @@ resource "azurerm_subnet" "test_snet" {
 }
 
 resource "azurerm_container_registry" "acr" {
-  name                = "ecContainerRegistry001"
+  name                = "eNameofContainerRegistry001"
   resource_group_name = azurerm_resource_group.rg_container_registry.name
   location            = azurerm_resource_group.rg_container_registry.location
   sku                 = "Premium"
